@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@pidev703 
-bmuschko
-/
-ckad-prep
-Public
-Fork your own copy of bmuschko/ckad-prep
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-ckad-prep/1-core-concepts.md
-@bmuschko
-bmuschko Use /bin/sh consistently
-Latest commit 84986fd on May 17, 2019
- History
- 1 contributor
-141 lines (113 sloc)  4.81 KB
-
 # Core Concepts (13%)
 
 ## Creating a Pod and Inspecting it
@@ -137,42 +108,34 @@ Connecting to 192.168.60.149:80 (192.168.60.149:80)
 <h1>Welcome to nginx!</h1>
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
+
 <p>For online documentation and support please refer to
 <a href="http://nginx.org/">nginx.org</a>.<br/>
 Commercial support is available at
 <a href="http://nginx.com/">nginx.com</a>.</p>
+
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
 -                    100% |**********************************************************************|   612  0:00:00 ETA
 / # exit
 ```
+
 The logs of the Pod should show a single line indicating our request.
+
 ```bash
 $ kubectl logs mypod -n ckad-prep
 192.168.60.162 - - [17/May/2019:13:35:59 +0000] "GET / HTTP/1.1" 200 612 "-" "Wget" "-"
 ```
+
 Delete the Pod and namespace after you are done.
+
 ```bash
 $ kubectl delete pod mypod --namespace=ckad-prep
 pod "mypod" deleted
 $ kubectl delete namespace ckad-prep
 namespace "ckad-prep" deleted
 ```
+
 </p>
 </details>
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-ckad-prep/1-core-concepts.md at master · bmuschko/ckad-prep
