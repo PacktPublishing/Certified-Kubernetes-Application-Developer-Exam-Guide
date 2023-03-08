@@ -190,4 +190,4 @@
     kubectl logs -n default dev-pod-dind-878516 log-x | grep WARNING > /opt/dind-878516_logs.txt
     ```
 
-    </details>%
+    </details>
