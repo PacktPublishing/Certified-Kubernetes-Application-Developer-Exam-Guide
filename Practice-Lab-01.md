@@ -292,4 +292,4 @@
                 cpu: 200m
     ```
 
-    </details>%   
+    </details>  
